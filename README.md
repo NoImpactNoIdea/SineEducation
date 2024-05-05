@@ -25,3 +25,4 @@ The app generates sine waves that correspond to the frequency ranges various ani
 - Birds
 - Lizards
 - And many more!
+

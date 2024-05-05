@@ -10,7 +10,7 @@
 		66465A302BE6F6E300EF65B4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66465A2F2BE6F6E300EF65B4 /* DetailView.swift */; };
 		66465A332BE6FCB100EF65B4 /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66465A322BE6FCB100EF65B4 /* Preview Content.xcassets */; };
 		66465A352BE7236D00EF65B4 /* SineWaveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66465A342BE7236D00EF65B4 /* SineWaveGenerator.swift */; };
-		66465A372BE7340800EF65B4 /* README.me in Resources */ = {isa = PBXBuildFile; fileRef = 66465A362BE7340800EF65B4 /* README.me */; };
+		66465A372BE7340800EF65B4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 66465A362BE7340800EF65B4 /* README.md */; };
 		66465A392BE7345C00EF65B4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 66465A382BE7345C00EF65B4 /* .gitignore */; };
 		66B28A792BE6E1C800DAC6C7 /* SineEducationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */; };
 		66B28A7B2BE6E1C800DAC6C7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28A7A2BE6E1C800DAC6C7 /* Home.swift */; };
@@ -21,7 +21,7 @@
 		66465A2F2BE6F6E300EF65B4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		66465A322BE6FCB100EF65B4 /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		66465A342BE7236D00EF65B4 /* SineWaveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWaveGenerator.swift; sourceTree = "<group>"; };
-		66465A362BE7340800EF65B4 /* README.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.me; sourceTree = "<group>"; };
+		66465A362BE7340800EF65B4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66465A382BE7345C00EF65B4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		66B28A752BE6E1C800DAC6C7 /* SineEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SineEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineEducationApp.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				66465A382BE7345C00EF65B4 /* .gitignore */,
-				66465A362BE7340800EF65B4 /* README.me */,
+				66465A362BE7340800EF65B4 /* README.md */,
 				66B28A772BE6E1C800DAC6C7 /* SineEducation */,
 				66B28A762BE6E1C800DAC6C7 /* Products */,
 			);
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66465A392BE7345C00EF65B4 /* .gitignore in Resources */,
-				66465A372BE7340800EF65B4 /* README.me in Resources */,
+				66465A372BE7340800EF65B4 /* README.md in Resources */,
 				66465A332BE6FCB100EF65B4 /* Preview Content.xcassets in Resources */,
 				66B28A7D2BE6E1C900DAC6C7 /* Assets.xcassets in Resources */,
 			);
