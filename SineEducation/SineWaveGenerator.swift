@@ -49,13 +49,7 @@ class SineWaveGenerator: ObservableObject {
             audioEngine.attach(node)
             audioEngine.connect(node, to: audioEngine.outputNode, format: nil)
         }
-        
-        do {
-            try audioEngine.start()
-        } catch {
-            print("Error starting audio engine: \(error)")
-        }
-        
+       
         updateThetaIncrement()
     }
 

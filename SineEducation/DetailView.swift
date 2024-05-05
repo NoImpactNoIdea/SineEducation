@@ -37,7 +37,7 @@ struct DetailView: View {
                     
                     Slider(value: $sliderValue, in: data.hertz.0...data.hertz.1, step: 1)
                         .onChange(of: sliderValue) { newValue in
-                            if isPlaying {  
+                            if isPlaying {
                                 sineWaveGenerator.updateFrequency(frequency: newValue)
                             }
                         }
@@ -75,12 +75,15 @@ struct DetailView: View {
         .navigationTitle(data.id.capitalized)
         .navigationBarTitleDisplayMode(.inline)
         .onReceive(resignActivePublisher) { _ in
+            print("Is this called at all?")
             if isPlaying {
                 sineWaveGenerator.stopTone()
                 isPlaying = false
             }
         }
         .onDisappear {
+            print("Is this called at all also?")
+
             if isPlaying {
                 sineWaveGenerator.stopTone()
             }

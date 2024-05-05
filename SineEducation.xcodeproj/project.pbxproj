@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66044C9B2BE8190100C871C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66044C9A2BE8190100C871C4 /* Launch Screen.storyboard */; };
+		66044CA02BE81A0600C871C4 /* shawave 2@1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044C9D2BE81A0600C871C4 /* shawave 2@1x.jpg */; };
+		66044CA12BE81A0600C871C4 /* shawave 2@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044C9E2BE81A0600C871C4 /* shawave 2@3x.jpg */; };
+		66044CA22BE81A0600C871C4 /* shawave 2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044C9F2BE81A0600C871C4 /* shawave 2@2x.jpg */; };
+		66044CA62BE81A0E00C871C4 /* shawave 1@1x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044CA32BE81A0E00C871C4 /* shawave 1@1x.jpg */; };
+		66044CA72BE81A0E00C871C4 /* shawave 1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044CA42BE81A0E00C871C4 /* shawave 1@2x.jpg */; };
+		66044CA82BE81A0E00C871C4 /* shawave 1@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 66044CA52BE81A0E00C871C4 /* shawave 1@3x.jpg */; };
 		66465A302BE6F6E300EF65B4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66465A2F2BE6F6E300EF65B4 /* DetailView.swift */; };
 		66465A332BE6FCB100EF65B4 /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66465A322BE6FCB100EF65B4 /* Preview Content.xcassets */; };
 		66465A352BE7236D00EF65B4 /* SineWaveGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66465A342BE7236D00EF65B4 /* SineWaveGenerator.swift */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66044C9A2BE8190100C871C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		66044C9D2BE81A0600C871C4 /* shawave 2@1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 2@1x.jpg"; sourceTree = "<group>"; };
+		66044C9E2BE81A0600C871C4 /* shawave 2@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 2@3x.jpg"; sourceTree = "<group>"; };
+		66044C9F2BE81A0600C871C4 /* shawave 2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 2@2x.jpg"; sourceTree = "<group>"; };
+		66044CA32BE81A0E00C871C4 /* shawave 1@1x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 1@1x.jpg"; sourceTree = "<group>"; };
+		66044CA42BE81A0E00C871C4 /* shawave 1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 1@2x.jpg"; sourceTree = "<group>"; };
+		66044CA52BE81A0E00C871C4 /* shawave 1@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shawave 1@3x.jpg"; sourceTree = "<group>"; };
 		66465A2F2BE6F6E300EF65B4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		66465A322BE6FCB100EF65B4 /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		66465A342BE7236D00EF65B4 /* SineWaveGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWaveGenerator.swift; sourceTree = "<group>"; };
@@ -40,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66044C9C2BE8196A00C871C4 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				66044CA32BE81A0E00C871C4 /* shawave 1@1x.jpg */,
+				66044CA42BE81A0E00C871C4 /* shawave 1@2x.jpg */,
+				66044CA52BE81A0E00C871C4 /* shawave 1@3x.jpg */,
+				66044C9D2BE81A0600C871C4 /* shawave 2@1x.jpg */,
+				66044C9F2BE81A0600C871C4 /* shawave 2@2x.jpg */,
+				66044C9E2BE81A0600C871C4 /* shawave 2@3x.jpg */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		66465A312BE6FC6B00EF65B4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +96,14 @@
 		66B28A772BE6E1C800DAC6C7 /* SineEducation */ = {
 			isa = PBXGroup;
 			children = (
+				66044C9C2BE8196A00C871C4 /* Icons */,
 				66465A312BE6FC6B00EF65B4 /* Preview Content */,
 				66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */,
 				66B28A7A2BE6E1C800DAC6C7 /* Home.swift */,
 				66465A2F2BE6F6E300EF65B4 /* DetailView.swift */,
 				66B28A7C2BE6E1C900DAC6C7 /* Assets.xcassets */,
 				66465A342BE7236D00EF65B4 /* SineWaveGenerator.swift */,
+				66044C9A2BE8190100C871C4 /* Launch Screen.storyboard */,
 			);
 			path = SineEducation;
 			sourceTree = "<group>";
@@ -138,9 +167,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				66465A392BE7345C00EF65B4 /* .gitignore in Resources */,
+				66044CA02BE81A0600C871C4 /* shawave 2@1x.jpg in Resources */,
+				66044CA22BE81A0600C871C4 /* shawave 2@2x.jpg in Resources */,
 				66465A372BE7340800EF65B4 /* README.md in Resources */,
 				66465A332BE6FCB100EF65B4 /* Preview Content.xcassets in Resources */,
+				66044CA62BE81A0E00C871C4 /* shawave 1@1x.jpg in Resources */,
+				66044CA12BE81A0600C871C4 /* shawave 2@3x.jpg in Resources */,
+				66044CA72BE81A0E00C871C4 /* shawave 1@2x.jpg in Resources */,
+				66044C9B2BE8190100C871C4 /* Launch Screen.storyboard in Resources */,
 				66B28A7D2BE6E1C900DAC6C7 /* Assets.xcassets in Resources */,
+				66044CA82BE81A0E00C871C4 /* shawave 1@3x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SineEducation/Preview Content\"";
@@ -294,6 +331,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SineEducation/Preview Content\"";
@@ -323,6 +362,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
