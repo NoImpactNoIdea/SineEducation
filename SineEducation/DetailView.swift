@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 struct DetailView: View {
     var data: SquareData
@@ -6,7 +7,9 @@ struct DetailView: View {
     @State private var sliderValue: Double
     @State private var isPlaying: Bool = false
     @StateObject private var sineWaveGenerator = SineWaveGenerator()
-    
+
+    private let resignActivePublisher = NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)
+
     init(data: SquareData) {
         self.data = data
         _sliderValue = State(initialValue: data.hertz.0)
@@ -34,32 +37,19 @@ struct DetailView: View {
                     
                     Slider(value: $sliderValue, in: data.hertz.0...data.hertz.1, step: 1)
                         .onChange(of: sliderValue) { newValue in
-                            print(Int(newValue))
-                            sineWaveGenerator.updateFrequency(frequency: newValue)
+                            if isPlaying {  
+                                sineWaveGenerator.updateFrequency(frequency: newValue)
+                            }
                         }
                         .onAppear {
                             sineWaveGenerator.updateFrequency(frequency: data.hertz.0)
                         }
                     
-                    Button("Play Tone") {
-                        sineWaveGenerator.startTone()
-                        isPlaying = true
+                    Button(isPlaying ? "Stop Tone" : "Play Tone") {
+                        togglePlay()
                     }
-                    .disabled(isPlaying)
-                    .opacity(1.0)
                     .padding(10)
-                    .background(isPlaying ? Color.green : Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .fontWeight(.bold)
-                    
-                    Button("Stop Tone") {
-                        sineWaveGenerator.stopTone()
-                        isPlaying = false
-                    }
-                    .opacity(isPlaying ? 1.0 : 0.5)
-                    .padding(10)
-                    .background(Color.red)
+                    .background(isPlaying ? Color.red : Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .fontWeight(.bold)
@@ -84,11 +74,27 @@ struct DetailView: View {
         }
         .navigationTitle(data.id.capitalized)
         .navigationBarTitleDisplayMode(.inline)
+        .onReceive(resignActivePublisher) { _ in
+            if isPlaying {
+                sineWaveGenerator.stopTone()
+                isPlaying = false
+            }
+        }
         .onDisappear {
             if isPlaying {
                 sineWaveGenerator.stopTone()
             }
         }
+    }
+
+    private func togglePlay() {
+        if isPlaying {
+            sineWaveGenerator.stopTone()
+        } else {
+            sineWaveGenerator.startTone()
+            sineWaveGenerator.updateFrequency(frequency: sliderValue)
+        }
+        isPlaying.toggle()
     }
 }
 
