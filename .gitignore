@@ -1,0 +1,69 @@
+# Xcode
+##
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+# CocoaPods
+##
+Pods/
+
+# Carthage
+##
+Carthage/Build
+
+# fastlane
+##
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Swift Package Manager
+##
+.build/
+Package.resolved
+
+# OS X
+##
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+##
+._*
+
+# Files that might appear in the root of a volume
+##
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+##
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# JetBrains IDEs
+##
+.idea/
+
+# Visual Studio Code
+##
+.vscode/
+

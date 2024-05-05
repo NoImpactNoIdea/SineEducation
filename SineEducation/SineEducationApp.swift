@@ -11,7 +11,7 @@ import SwiftUI
 struct SineEducationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
