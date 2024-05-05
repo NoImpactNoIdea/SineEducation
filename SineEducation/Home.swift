@@ -67,12 +67,12 @@ struct Home: View {
     
     var headerText: some View {
         VStack(alignment: .leading) {
-            Text("Sine Education")
+            Text("Shawave")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 20)
-            Text("Learn More About Animals")
+            Text("Discover Nature's Symphony")
                 .font(.title2)
                 .fontWeight(.bold)
                 .foregroundColor(.gray)

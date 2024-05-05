@@ -31,7 +31,7 @@ struct DetailView: View {
                 
                 VStack(alignment: .leading, spacing: 20) {
                     
-                    Text("Adjust Sine Strength")
+                    Text("Adjust Frequency Strength")
                         .font(.headline)
                         .padding(.top, 20)
                     
