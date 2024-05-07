@@ -20,9 +20,23 @@ The app generates sine waves that correspond to the frequency ranges various ani
 
 ### Supported Animals
 
-- Dogs
-- Cats
-- Birds
-- Lizards
-- And many more!
+- Dog
+- Cat
+- Bird
+- Fish
+- Rabbit
+- Adult Human
+- Child
+- Lizard
+
+### Supported Waveform Types
+
+- Sine
+- Square
+- Triangle
+- Sawtooth
+
+### Disclaimer
+
+<span style="color:red">For auditory safety, the maximum frequency range is limited to 24,000 Hz</span>
 

@@ -1,3 +1,10 @@
+//
+//  DetailView.swift
+//  SineEducation
+//
+//  Created by Charlie Arcodia on 5/4/24.
+
+
 import SwiftUI
 import Combine
 
@@ -6,13 +13,14 @@ struct DetailView: View {
     
     @State private var sliderValue: Double
     @State private var isPlaying: Bool = false
-    @StateObject private var sineWaveGenerator = SineWaveGenerator()
+    @StateObject private var sineWaveGenerator: SineWaveGenerator
 
     private let resignActivePublisher = NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)
 
-    init(data: SquareData) {
+    init(data: SquareData, selectedWaveform: Waveform) {
         self.data = data
         _sliderValue = State(initialValue: data.hertz.0)
+        _sineWaveGenerator = StateObject(wrappedValue: SineWaveGenerator(waveform: selectedWaveform))
     }
     
     var body: some View {
@@ -35,8 +43,14 @@ struct DetailView: View {
                         .font(.headline)
                         .padding(.top, 20)
                     
+                    Text("Waveform: ")
+                        .font(.headline)
+                    + Text(self.sineWaveGenerator.waveform.rawValue.localizedCapitalized)
+                        .font(.headline)
+                        .foregroundColor(self.data.backgroundColor)
+                    
                     Slider(value: $sliderValue, in: data.hertz.0...data.hertz.1, step: 1)
-                        .onChange(of: sliderValue) { newValue in
+                        .onChange(of: sliderValue) { newValue, _ in
                             if isPlaying {
                                 sineWaveGenerator.updateFrequency(frequency: newValue)
                             }
@@ -104,7 +118,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(data: SquareData(id: "dog", backgroundColor: .blue, imageName: "dog.fill", description: "Dogs have a sensitive range of hearing.", hertz: (20,20000)))
+            DetailView(data: SquareData(id: "dog", backgroundColor: .blue, imageName: "dog.fill", description: "Dogs have a sensitive range of hearing.", hertz: (20,20000)), selectedWaveform: .sine)
         }
     }
 }

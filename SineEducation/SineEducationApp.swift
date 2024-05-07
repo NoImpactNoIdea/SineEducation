@@ -2,7 +2,7 @@
 //  SineEducationApp.swift
 //  SineEducation
 //
-//  Created by Cristina Arcodia on 5/4/24.
+//  Created by Charlie Arcodia on 5/4/24.
 //
 
 import SwiftUI

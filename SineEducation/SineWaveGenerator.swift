@@ -1,3 +1,10 @@
+//
+//  SineWaveGenerator.swift
+//  SineEducation
+//
+//  Created by Charlie Arcodia on 5/4/24.
+
+
 import Foundation
 import AVFoundation
 
@@ -7,6 +14,7 @@ class SineWaveGenerator: ObservableObject {
     private var currentPhase: Double = 0.0
     private var thetaIncrement: Double = 0.0
     private var sampleRate: Double = 44100.0
+    @Published var waveform: Waveform
     
     @Published var frequency: Double = 440 {
         didSet {
@@ -14,32 +22,41 @@ class SineWaveGenerator: ObservableObject {
         }
     }
     
-    init() {
-        audioEngine = AVAudioEngine()
-        configureToneNode()
-        setupAudioEngine()
-    }
+    init(waveform: Waveform) {
+           self.waveform = waveform
+           audioEngine = AVAudioEngine()
+           configureToneNode()
+           setupAudioEngine()
+       }
     
     private func configureToneNode() {
-        let node = AVAudioSourceNode { [weak self] _, _, frameCount, audioBufferList -> OSStatus in
+        toneNode = AVAudioSourceNode { [weak self] _, _, frameCount, audioBufferList -> OSStatus in
             guard let self = self else { return noErr }
-            
             let ablPointer = UnsafeMutableAudioBufferListPointer(audioBufferList)
             for frame in 0..<Int(frameCount) {
-                let value = sin(self.currentPhase)
+                let value: Float = {
+                    switch self.waveform {
+                    case .sine:
+                        return Float(sin(self.currentPhase))
+                    case .square:
+                        return self.currentPhase < .pi ? 1.0 : -1.0
+                    case .triangle:
+                        return Float(-1 + (2 / .pi) * self.currentPhase)
+                    case .sawtooth:
+                        return Float((2 / .pi) * (self.currentPhase - .pi))
+                    }
+                }()
                 self.currentPhase += self.thetaIncrement
-                if self.currentPhase > 2.0 * Double.pi {
-                    self.currentPhase -= 2.0 * Double.pi
+                if self.currentPhase > 2.0 * .pi {
+                    self.currentPhase -= 2.0 * .pi
                 }
                 for buffer in ablPointer {
                     let buf: UnsafeMutableBufferPointer<Float> = UnsafeMutableBufferPointer(buffer)
-                    buf[frame] = Float(value)
+                    buf[frame] = value
                 }
             }
             return noErr
         }
-        
-        self.toneNode = node
     }
     
     private func setupAudioEngine() {

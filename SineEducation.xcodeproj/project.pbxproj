@@ -22,6 +22,7 @@
 		66B28A792BE6E1C800DAC6C7 /* SineEducationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */; };
 		66B28A7B2BE6E1C800DAC6C7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28A7A2BE6E1C800DAC6C7 /* Home.swift */; };
 		66B28A7D2BE6E1C900DAC6C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B28A7C2BE6E1C900DAC6C7 /* Assets.xcassets */; };
+		66FDB3162BE9A96800B006DB /* AnimalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FDB3152BE9A96800B006DB /* AnimalStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineEducationApp.swift; sourceTree = "<group>"; };
 		66B28A7A2BE6E1C800DAC6C7 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		66B28A7C2BE6E1C900DAC6C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66FDB3152BE9A96800B006DB /* AnimalStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				66044C9C2BE8196A00C871C4 /* Icons */,
 				66465A312BE6FC6B00EF65B4 /* Preview Content */,
 				66B28A782BE6E1C800DAC6C7 /* SineEducationApp.swift */,
+				66FDB3152BE9A96800B006DB /* AnimalStruct.swift */,
 				66B28A7A2BE6E1C800DAC6C7 /* Home.swift */,
 				66465A2F2BE6F6E300EF65B4 /* DetailView.swift */,
 				66B28A7C2BE6E1C900DAC6C7 /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FDB3162BE9A96800B006DB /* AnimalStruct.swift in Sources */,
 				66B28A7B2BE6E1C800DAC6C7 /* Home.swift in Sources */,
 				66465A302BE6F6E300EF65B4 /* DetailView.swift in Sources */,
 				66B28A792BE6E1C800DAC6C7 /* SineEducationApp.swift in Sources */,
@@ -342,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = prostackdevkit.SineEducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,9 +381,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = prostackdevkit.SineEducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
